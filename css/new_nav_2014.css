@@ -1,0 +1,297 @@
+/* CSS Document */
+
+/* =========== 2014 new nav code =========== */
+
+.head-full-wrap {
+	width: 100%;
+	background-color: #445565;
+	border-bottom: 4px solid #445565;
+	/*position: absolute;*/
+}
+.head-container {
+	width: 952px;
+	margin: 0 auto;
+	height: 128px;
+}
+.logo-box {
+	width: 320px;
+	height: 128px;
+}
+.nav-box {
+	width: 632px;
+	height: 128px;
+}
+.nav-box-content {padding-top: 26px;}
+.hd-social {
+	width: 158px;
+	height: 33px;
+	text-align: center;
+	padding: 0;
+}
+.hd-social ul, .hd-nav ul {list-style: none;} 
+.hd-social li, .hd-nav li  {display: inline;}
+.hd-social li a {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	padding-left: 5px;
+}
+.hd-nav {
+	width: 100%;
+	margin-top: 68px;
+	padding: 0;
+	text-align: center;
+}
+.hd-nav li a:link, .hd-nav li a:visited {
+	color: #fff;
+	padding: 0 11px;
+	border-bottom: none;
+	height: 34px;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: normal;
+	display: inline-block;
+	text-transform: uppercase;
+}
+.hd-nav li a:hover  {
+	/*color: #ec2028;*/
+	border-bottom: 4px solid #ec2028;
+}
+.hd-nav li a.active {
+	/*color: #ec2028;*/
+	border-bottom: 4px solid #ec2028;
+}
+.left {float: left;}
+.right {float: right;}
+a img {border: none;}
+
+.hd-nav li{
+	position: relative;
+	z-index:1;
+}
+
+.subnav {
+	display: none;
+	position: absolute;
+	width: 240px;
+	background-color: #445565;
+	top: 36px;
+	left: 0;
+	border: none;
+	margin: 0;
+	padding: 15px 0;
+	z-index: 999999;
+	-webkit-box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.25);
+	-moz-box-shadow:    0px 1px 5px 0px rgba(50, 50, 50, 0.25);
+	box-shadow:         0px 1px 5px 0px rgba(50, 50, 50, 0.25);
+}
+.subnav ul {
+	list-style: none;
+	padding: 0;
+	margin:0;
+	width: 100%;
+}
+.subnav li{
+	margin:0;
+	font-size: 14px;
+	color: #fff;
+	list-style: none;
+	text-transform: uppercase;
+	text-align: left;
+	display: inline-block;
+	width: 100%;
+}
+.subnav ul li:hover {
+	color: #fff;
+}
+.contact-left-pos {
+	left: -102px;
+	width: 180px;
+}
+.subnav ul li a:link, .subnav ul li a:visited  {
+	color: #fff;
+	text-decoration: none;
+	padding: 4px 28px;
+	text-align: left;
+	line-height: 36px;
+	display: block;
+	border-bottom:0px;
+}
+.subnav ul li a:hover, .subnav ul li a:active  {
+	color: #ffffff;
+	border: none;
+	background-color: #ec2028;
+}
+
+
+/* =========== support modal box =========== */
+
+.overlay {
+	width:100%;
+	height:100%;
+	position: fixed;
+	top:0;
+	left:0;
+	background:url(../elements/overlay_blk.png) repeat 0px 0px;
+	z-index:9999 !important;
+	display:none;
+	margin: 0;
+	padding: 0;
+}
+.alert_wrap {
+	position:fixed;
+	width:500px;
+	top:50%;
+	left:50%;
+	margin:-125px 0 0 -250px;
+	z-index:10000;
+	display:none;
+}
+
+.support-login-box {
+	border-top: 4px solid #ec2028;
+	background-color: #ededed;
+	color: #4a4a4a;
+	text-transform: uppercase;
+	padding: 0 64px 26px;
+	width: 428px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 100;
+	position: relative;
+}
+form.support-form {width: 426px;}
+.support-login-box h2 {
+	color: #4a4a4a;
+	font-size: 20px;
+	font-weight: 100;
+	padding: 35px 0 45px;
+	letter-spacing: 1px;
+	margin: 0;
+}
+.close-container {
+	position: absolute;
+	top:23px;
+	right:23px;
+	cursor: pointer;
+	width: 16px;
+	height: 16px;
+}
+.support-login-box p.small {
+	font-size: 14px;
+}
+.support-login-box a:link, .support-login-box a:visited {
+	color: #4a4a4a;
+	!oration: underline;
+}
+.spb-box-outer {
+	margin: 0 auto;
+}
+.spb-box {
+ 	width: 46.5%;
+}
+.support-login-box input, .support-login-box input[type="password"], .support-login-box input[type="text"] {
+	height: 52px;
+	border: 1px solid #B7B7B7;
+	font-size: 16px;
+	padding: 0px 5%;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 100;
+	font-family: Arial, serif;
+	margin: 28px 0 0;
+	width: 90%;
+}
+.blck-it {
+	display: none;
+	width: 100%;
+	margin: 20px 0;
+}
+.support-login-box .login-btn {
+	background-color: #ec2028;
+	font-weight: 100;
+	font-size: 16px;
+	width: 100%;
+	color: #fff;
+	height: 51px;
+	line-height: 54px;
+	margin: 11px 0 27px;
+	cursor: pointer;
+} 
+
+
+/* =========== custom radio =========== */
+
+/*
+    Hide the original radios and checkboxes
+    (but still accessible)
+
+    :not(#foo) > is a rule filter to block browsers
+                 that don't support that selector from
+                 applying rules they shouldn't
+
+*/
+.spb-radios:not(#foo) > input[type='radio'],
+.spb-radios:not(#foo) > input[type='checkbox'] {
+
+    /* Hide the input, but have it still be clickable */
+    opacity: 0;
+    float: left;
+    width: 18px; /*--was 18px--*/
+	position:absolute;
+	top:0;
+	left:0;
+	height:18px;
+}
+.spb-radios:not(#foo) > input[type='radio'] + label,
+.spb-radios:not(#foo) > input[type='checkbox'] + label {
+    margin: 0;
+    clear: none;
+    /* Left padding makes room for image */
+    padding: 5px 0 4px 30px;
+    /* Make look clickable because they are */
+    cursor: pointer;
+    background: url(../elements/general_build/off.png) left center no-repeat;
+}
+/*
+    Change from unchecked to checked graphic
+*/
+.spb-radios:not(#foo) > input[type='radio']:checked + label {
+    background-image: url(../elements/general_build/radio.png);
+}
+.spb-radios:not(#foo) > input[type='checkbox']:checked + label {
+    background-image: url(../elements/general_build/check.png);
+}
+
+.margin-adjusted {margin-left:60px;}
+
+/* #Retina-specific stuff here
+================================================== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+
+/* Retina-specific stuff here */
+	.spb-radios:not(#foo) > input[type='radio'] + label,
+	.spb-radios:not(#foo) > input[type='checkbox'] + label {
+		margin: 0;
+		clear: none;
+		/* Left padding makes room for image */
+		padding: 5px 0 4px 30px;
+		/* Make look clickable because they are */
+		cursor: pointer;
+		background: url(../elements/general_build/off_2x.png) left center no-repeat;
+		background-size:20px;
+	}
+	/*
+		Change from unchecked to checked graphic
+	*/
+	.spb-radios:not(#foo) > input[type='radio']:checked + label {
+		background-image: url(../elements/general_build/radio_2x.png);
+		background-size:20px;
+	}
+	.spb-radios:not(#foo) > input[type='checkbox']:checked + label {
+		background-image: url(../elements/general_build/check_2x.png);
+		background-size:20px;
+	}
+
+}
+

@@ -1,0 +1,128 @@
+/*====== PEOPLE SLIDER =======*/
+/*.padding_wrap_for_sanskrit {
+	padding:15px;
+	width:284px;
+	height:300px;
+	margin:auto;
+	border: 2px solid red;
+}*/
+.people_block {
+	position:relative;
+	width:284px;
+	height:300px;
+	background-color:#e6e6e6;
+	padding-bottom:5px;
+	
+
+}
+.people_block p {
+	line-height:16px;
+	color: #666;
+	margin:0 0 5px 0;
+	padding:0;
+}
+table.subcat_heading_wrap {
+	width:280px;
+	vertical-align:middle;
+	padding-bottom:10px;
+}
+div.people_img {
+	width:100px;
+	height:100px;
+	margin:0 10px 0 0;
+	/*border: 1px solid #db0f00;
+	background-color:#999;*/
+}
+h5 {
+	font-size:20px;
+	line-height:23px;
+	margin:0; 
+	padding:5px 0 0 0 !important; 
+	color:#db0f00; 
+	font-weight:normal; 
+	text-transform:uppercase;
+}
+h5.centered {
+	text-align:center;
+	font-weight:bold;
+}
+
+h6 {margin:0; 
+	padding:0; 
+	color:#db0f00; 
+	font-weight:normal; 
+	text-transform:uppercase;
+	font-size:20px;} 
+
+.hover:hover {
+	background-color:#FF9;
+	cursor:pointer;
+}
+div.bullet_wrap {
+	position:relative;
+	width:285px;
+	/*height:36px;*/
+	overflow:hidden;
+}
+
+div.bullet {
+	width:10px;
+	padding-top:5px;
+	background:url(../elements/general_build/red_button_trans.png) top left no-repeat;
+	display:table-cell;
+	padding-right:3px;
+	
+}
+div.list_item {
+	display: table-cell;	
+	padding:2px 0;
+	line-height:16px;
+	
+}
+div.list_item a {text-decoration:none; color:#333;}
+div.list_item a:hover { text-decoration:none; color:#db0f00;}
+a.article {text-decoration:none;}
+
+div.li_readmore {
+	width:45px;
+	height:18px;
+	line-height:20px;
+	position:absolute;
+	right:0;
+	bottom:1px;
+	background-color:#e6e6e6;
+	text-align:right;
+	color:#db0f00;
+	font-weight:bold;
+	font-size:11px;
+}
+#news_full_content_wrap {
+	float:left;
+	width:580px;
+	height:75%;
+	color:#db0f00;
+}
+
+#left_container {
+	float:left; 
+	margin-right:20px; 
+	vertical-align:top;
+	width:235px;
+}
+.pop_image{
+	height:249px;
+	border: 1px solid #db0f00;
+}
+.links_block ul{
+	padding-left:20px;
+}
+.links_block li{
+	color:#db0f00;
+	margin:0;
+	padding-bottom:10px;
+}
+	
+.news_content {
+	color:#db0f00;
+	line-height:16px;
+}

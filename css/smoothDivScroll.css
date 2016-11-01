@@ -1,0 +1,68 @@
+/* You can alter this CSS in order to give SmoothDivScroll your own look'n'feel */
+
+/* Invisible left hotspot */
+div.scrollingHotSpotLeft
+{
+	min-width: 75px;
+	width: 10%;
+	height: 100%;
+	position: absolute;
+	z-index: 200;
+	left: 0;
+	background:url(../elements/slider_build/left_cat_arrow.png) top left no-repeat;
+	background-position: -40px -40px;
+}
+div.scrollingHotSpotLeft:hover { background-position: 0; }
+
+div.scrollingHotSpotRight
+{
+	min-width: 75px;
+	width: 10%;
+	height: 100%;
+	position: absolute;
+	z-index: 200;
+	right: 0;
+	background: url(../elements/slider_build/right_cat_arrow.png) top right no-repeat;
+	background-position: -40px;
+}
+div.scrollingHotSpotRight:hover { background-position: 68px }
+/* Visible left hotspot */
+div.scrollingHotSpotLeftVisible
+{
+	background-image: url(../images/arrow_left.gif);				
+	background-color: #fff;
+	background-repeat: no-repeat;
+	opacity: 0.35; /* Standard CSS3 opacity setting */
+	-moz-opacity: 0.35; /* Opacity for really old versions of Mozilla Firefox (0.9 or older) */
+	filter: alpha(opacity = 35); /* Opacity for Internet Explorer. */
+	zoom: 1; /* Trigger "hasLayout" in Internet Explorer 6 or older versions */
+}
+/* Visible right hotspot */
+div.scrollingHotSpotRightVisible
+{
+	background-image: url(../images/arrow_right.gif);
+	background-color: #fff;
+	background-repeat: no-repeat;
+	opacity: 0.35;
+	filter: alpha(opacity = 35);
+	-moz-opacity: 0.35;
+	zoom: 1;
+}
+
+/* The scroll wrapper is always the same width and height as the containing element (div).
+   Overflow is hidden because you don't want to show all of the scrollable area.
+*/
+div.scrollWrapper
+{
+	position: relative;
+	overflow: hidden;
+	width: 952px;
+	height: 58px;
+}
+
+div.scrollableArea
+{
+	position: relative;
+	width:auto;
+	height: 100%;
+}
