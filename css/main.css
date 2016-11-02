@@ -43,19 +43,22 @@ a img, img {border:none;}
    -o-background-size: cover;
    background-size: cover;
 	background-color: #222;
-    padding-top: 152px;
-    padding-bottom: 120px;
+    padding-top: 25px;
+    /*max-height: 350px;*/
+    padding-bottom: 15px;
     text-align: center;
 }
 
 .banner-top{
 	/*margin-top: 100px;*/
     text-align: center; 
-    padding: 0 200px 0 200px;
+    /*padding: 0 200px 0 200px;*/
 	opacity: 0;
 }
 
 .genasys-splash-logo{
+	max-height:115px;
+	width:auto;
 	margin: auto;
 }
 
@@ -63,14 +66,14 @@ a img, img {border:none;}
 	color: #A3A3A5;
 	max-width: 620px;
 	margin: auto;
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .splash-row {
 	max-width: 620px;
 	margin: auto;
-	padding-top: 30px;
+	padding-top: 15px;
 	color: white;
 
 }
@@ -116,8 +119,8 @@ a img, img {border:none;}
 
 #stats-section {
 	background-color: #445565;
-    padding-top: 80px;
-    padding-bottom: 250px;
+    /*padding-top: 10px;*/
+    /*padding-bottom: 10px;*/
     text-align: center;
     color: white;
 
@@ -150,16 +153,16 @@ a img, img {border:none;}
 }
 
 .stats-box-inner {
-	padding-top: 15px;
-	max-width: 250px;
+	padding-top: 5px;
+	max-width: 180px;
 	margin: auto;
 	border: 1px solid white;
-	height: 100%;
+	height: 165px;
 }
 
 .box1-count{
 	margin: 0 0 10px !important;
-	font-size: 60px;
+	font-size: 50px;
 	vertical-align: center;
 	text-align: center;
 	line-height: 0px !important;
@@ -168,24 +171,24 @@ a img, img {border:none;}
 
 .box2-sm{
 	line-height: 35px;	
-	font-size: 26px;
+	font-size: 18px;
 	color:#ccc !important;
 }
 
 .box2-md{
 	line-height: 35px;
-	font-size: 30px;
+	font-size: 24px;
 	color:white !important;	
 }
 
 .box4-count {
-	font-size: 50px;
-	padding-top: 35px;
+	font-size: 34px;
+	padding-top: 50px;
 }
 
 .box4-sub {
-	font-size: 36px;
-    margin-left: -20px !important;
+	font-size: 24px;
+    margin-left: -15px !important;
     font-weight: 200;
     line-height: 35px;
 }
@@ -209,13 +212,14 @@ a img, img {border:none;}
 }
 
 .chart1-padding{
-	height:50px;
+	height:10px;
 	width: 100%;
 }
 
 #chart1 {
-	height: 350px !important;
-	width: 700px !important;
+	height: auto !important;
+	width: 100% !important;
+	/*width: 700px !important;*/
 }
 #chart1sm {
 	height: auto !important;
@@ -238,13 +242,14 @@ a img, img {border:none;}
 }
 
 .chart2-padding{
-	height:50px;
+	height:10px;
 	width: 100%;
 }
 
 #chart2 {
-	height: 350px !important;
-	width: 700px !important;
+	height: auto !important;
+	width: 100% !important;
+	/*width: 700px !important;*/
 }
 
 #chart2sm {
@@ -322,7 +327,10 @@ html {
 .steps-name{
 	padding-top:10px;
 }
-
+.cd-horizontal-timeline{
+	padding-top: 10px;
+	margin-top: 0 !important;
+}
 .section-header, .steps-header, .steps-name {
   color: #3498DB;
   font-weight: 400;

@@ -6,8 +6,586 @@
       <meta name="viewport" content="width=device-width; initial-scale = 1.0; 
          maximum-scale=1.0; user-scalable=no" />
       <title>Genasys Technologies</title>
+      <link href="css/main.css" rel="stylesheet" type="text/css" media="screen" />
+      <link href="css/dropdown.css" rel="stylesheet" type="text/css" media="screen" />
+      <link href="css/smoothDivScroll.css" rel="stylesheet" type="text/css" />
+      <!-- <link href="css/new_nav_2014.css" rel="stylesheet" type="text/css" /> -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/navbar.css" rel="stylesheet" type="text/css" />
+      <link rel="stylesheet" href="css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Kristi|Alegreya+Sans:300,800" rel="stylesheet" type="text/css">
+      <!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css"> -->
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/animate.css">
+      <link rel="stylesheet" href="css/flickity.min.css">
+      <link rel="stylesheet" href="css/iconate.min.css">
+	  <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	  <link rel="stylesheet" href="css/timeline.css"> <!-- Resource style -->
+      <script src="scripts/jquery.min.js"></script>
+	  <script src="scripts/modernizr.js"></script> <!-- Modernizr -->
+      <!-- <script type="text/javascript" src="scripts/jquery.smoothDivScroll-1.1.js"></script> -->
+      <script type="text/javascript" src="scripts/jquery.hoverIntent.minified.js" ></script>
+      <style>
+         .support-login-box.imported label {
+         display: none;
+         }
+         .support-login-box input[type="password"]{
+         margin: 0px 0 0 20px;}
+         .support-login-box.imported button#Login
+         {width: 100%;
+         margin: 1rem;
+         background-color: #ec2028;
+         padding: 2rem 0;
+         color: #fff;
+         font-size: 20px;
+         border: none;
+         }
+         input#username {
+         margin: 0px 0 0 9px;
+         }
+         .support-login-box.imported div#rem {
+         display: none;
+         }
+         .identity.first,
+         .identity.last {
+         float: left;
+         width: 49%;
+         }
+      </style>
+      <script>
+         $('.support-login-box').text("hello");
+      </script>
+      <script type="text/javascript">
+         $(document).ready( function(){
+         	// SUPPORT LOGIN
+         	var ie7 = (navigator.appVersion.indexOf("MSIE 7.")==-1) ? false : true;
+         	if(ie7){
+         		$('#support_link').attr({'href':'https://genasys.force.com/customers/login?inst=U&startURL;=/customers/500/o', 'target': '_new'});
+         	}
+         	var focused = true;
+         	$(window).focus(function(){
+         		focused = true;
+         	});
+         	$(window).blur(function(){
+         		focused = false;
+         	});
+         
+         	$('#support').click(function(){
+         		$('ul.support_login').show();
+         		$('#close_wrap').show();
+         	});
+         	$('#close_wrap').click(function(){
+         		$('ul.support_login').hide();
+         		$('#close_wrap').hide();
+         	});
+         
+         	var path = window.location.pathname;
+         	var page_name = path.substring(path.lastIndexOf('/') + 1);
+         	var prefix = '../';
+         	if(page_name=="index.html" || page_name==""){
+         		prefix=  '';
+         	}
+         	$('.login-btn').click(function(){
+         		var helpdesk = $('#helpdesk').attr('checked'),
+         		ontime = $('#ontime').attr('checked');
+         		if(helpdesk=="checked"){
+         			$('#support_login_form').attr('action','https://genasys.force.com/customers/login?inst=U&startURL;=/customers/500/o');
+         			$('#support_login_form').submit();
+         		}
+         		else if(ontime=="checked"){
+         			$('#support_login_form').attr('action','https://genasys.force.com/customers/login?inst=U&startURL;=/customers/500/o');
+         			$('#support_login_form').submit();
+         		}
+         	});
+         
+         	// SUPPORT BOX MODAL
+         	function set_overlay_height(){
+         		var page_height = $(document).outerHeight();
+         		$('.overlay').css('height', page_height+'px');
+         	}
+         	$( "a.gen-sup" ).click(function() {
+         		set_overlay_height();
+         		$('.overlay').delay(300).fadeIn(300);//show overlay background
+         		$('.alert_wrap').delay(300).fadeIn(300);//show alert_box
+         	});
+         	$('.close-it, .overlay').click(function(){
+         		$('.overlay').fadeOut(300);
+         		$('.alert_wrap').fadeOut(300);
+         		return false;
+         	});
+         
+         
+         });
+      </script>
+      <script>
+         $(document).ready(function(){
+         	$('.hd-nav li').click(function(){
+         		var subnav = $(this).children('.subnav');
+         		if(subnav.size()>0){
+         			subnav.slideToggle();
+         		}
+         	});
+         
+         	var ie7 = (navigator.appVersion.indexOf("MSIE 7.")==-1) ? false : true;
+         	if(ie7){
+         	}
+         
+         	//================= Nav Dropdowns 2014 ====================\\
+         	$(".hd-nav li").hoverIntent({
+             	over: function(){
+         			var subnav = $(this).children('.subnav');
+         			if(subnav.size()>0){
+         				if(!ie7){ subnav.stop().slideDown(); }
+         				else{ subnav.show(); }
+         			}
+         		},
+         		out: function(){
+         			var subnav = $(this).children('.subnav');
+         			if(subnav.size()>0){
+         				if(!ie7){ subnav.stop().slideUp(); }
+         				else{ subnav.hide(); }
+         			}
+         		},
+         		timeout: 500
+         	});
+         	//================= END Nav Dropdowns 2014 ====================\\
+         
+         });
+      </script>
+      <!-- InstanceBeginEditable name="head" -->
+      <script type="text/javascript">
+         $(document).ready(function(){
+         	 $('.active').removeClass('main active');
+         	// $('#nav_home').addClass('main active');
+         });
+      </script>
+      <style type="text/css">
+         .thumb_box ul{
+         width: 219px;
+         margin: 0;
+         padding: 0;
+         list-style: none;
+         }
+         .thumb_box ul li{
+         position: relative;
+         }
+      </style>
    </head>
-   <body style="background-image: url('img/wtf3.png'); background-size: 100%; background-repeat: no-repeat; background-color: #F8F8F8;" >
+   <body>
+      <!--  LINKS FOR LIVE:
+         pages/about.php
+         pages/products.php
+         pages/product.php?t=1      SKI
+         pages/product.php?t=6		INSTANDA
+         pages/people.php
+         pages/press.php
+         pages/culture.php
+         pages/contact.php
+         pages/contact.php
+         ===support login===
+         pdfs/genasys-tech-paia-manual-2015.pdf
+         -->
+      <nav class="navbar navbar-default">
+         <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand" href="#"><img src="elements/general_build/genasys_logo_white.png" height="65" width="auto"> </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+               <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#">ABOUT</a></li>
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PRODUCTS <span class="caret"></span></a>
+                     <ul class="dropdown-menu">
+                        <li><a href="#">SKi</a></li>
+                        <li><a href="#">Instanda</a></li>
+                     </ul>
+                  </li>
+                  <li><a href="#">PEOPLE</a></li>
+                  <li><a href="#">PRESS</a></li>
+                  <li><a href="#">CULTURE</a></li>
+                  <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CONTACT <span class="caret"></span></a>
+                     <ul class="dropdown-menu">
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#" class="gen-sup">Support login</a></li>
+                        <li><a href="pdfs/genasys-tech-paia-manual-2015.pdf" target="_blank">Compliance</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+         </div>
+         <!-- /.container-fluid -->
+      </nav>
+      <!-- InstanceBeginEditable name="content" -->
+      <div id="splash-top">
+         <div class="banner-top" id="top-splash-banner">
+         	<div class="container-fluid">
+         		<div class="row">
+         			<div class="col-lg-4">
+         			  <div style="padding: 20px 40px 20px 40px">
+	                     <!-- <h3 style="color: white">GWP per year</h3> -->
+	                     <div class="chart2-padding"></div>
+	                     <canvas id="chart2"></canvas>
+	                  </div>
+         				
+
+         			</div>
+         			<div class="col-lg-4">
+         				<!-- <div style="min-width: 600px;"> -->
+	                     <img src="elements/general_build/genasys-splash.png" alt="Genasys logo" class="img-responsive genasys-splash-logo">
+	                     <p class="splash-text">If you would like to engage with an established <a href="https://twitter.com/search?f=tweets&q=%23insuretechpartner" target="_blank">#insuretechpartner</a> that has the proven track record to help optimise your business with a stable and robust PAS, please contact us here</p>
+	                     <div class="splash-row">
+	                        <div class="col-md-4">
+	                           <input class="text-field-white" type="text" placeholder="Name" value="">
+	                        </div>
+	                        <div class="col-md-4">
+	                           <input class="text-field-white" type="text" placeholder="Surname" value="">
+	                        </div>
+	                        <div class="col-md-4">
+	                           <input class="text-field-white" type="email" placeholder="E-mail" value="">
+	                        </div>
+	                     </div>
+	                     <div class="splash-row" style="margin-top: 40px">
+	                        <div class="col-md-4">
+	                        </div>
+	                        <div class="col-md-4">
+	                           <button type="button" class="btn btn-info splash-submit">SUBMIT</button>
+	                        </div>
+	                        <div class="col-md-4">				
+	                        </div>
+	                     </div>
+	                  <!-- </div> -->
+
+         			</div>
+         			<div class="col-lg-4">
+         				<div style="padding: 20px 40px 20px 40px">
+		                     <!-- <h3 style="color: white">Employee Timeline</h3> -->
+		                     <div class="chart1-padding"></div>
+		                     <canvas id="chart1"></canvas>
+                 		</div>
+         			</div>
+
+         		</div>
+         	</div>
+	                  
+					
+
+                  
+      	</div>
+      </div>
+      <div id="stats-section">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-3 stats-box-outer">
+                  <div class="stats-box-inner">
+                     <i class="fa fa-users fa-2x users-icon" aria-hidden="true"></i>
+                     <p class="box1-count"><span class="count1">0</span>+</p>
+                  </div>
+                  <p class="stats-subheading">Amount of employees</p>
+               </div>
+               <div class="col-md-3 stats-box-outer">
+                  <div class="stats-box-inner cities-box" style="padding-top: 35px;">
+                     <p class="box2-sm city-box1">Cape Town</p>
+                     <p class="box2-md city-box2">Johannesburg</p>
+                     <p class="box2-sm city-box3">London</p>
+                  </div>
+                  <p class="stats-subheading">Branch Locations Globally</p>
+               </div>
+               <div class="col-md-3 stats-box-outer">
+                  <div class="stats-box-inner countries-box">
+                     <i id="switch-fa" class="fa fa-globe fa-2x users-icon" aria-hidden="true"></i>
+                     <p class="box1-count"><span class="count2">0</span></p>
+                  </div>
+                  <p class="stats-subheading countries-text">Countries Deployed</p>
+               </div>
+               <div class="col-md-3 stats-box-outer">
+                  <div class="stats-box-inner">
+                     <p class="box4-count">R<span class="count3">0</span>+</p>
+                     <p class="box4-sub">Billion</p>
+                  </div>
+                  <p class="stats-subheading">GWP value in Rands</p>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+      <section class="cd-horizontal-timeline">
+      	<div class="container-fluid">
+      		<div class="col-lg-6">
+				<div class="timeline">
+					<div class="events-wrapper">
+						<div class="events">
+							<ol>
+								<li><a href="#0" data-date="16/01/2014" class="selected">16 Jan</a></li>
+								<li><a href="#0" data-date="28/02/2014">28 Feb</a></li>
+								<li><a href="#0" data-date="20/04/2014">20 Mar</a></li>
+								<li><a href="#0" data-date="20/05/2014">20 May</a></li>
+								<li><a href="#0" data-date="09/07/2014">09 Jul</a></li>
+								<li><a href="#0" data-date="30/08/2014">30 Aug</a></li>
+								<li><a href="#0" data-date="15/09/2014">15 Sep</a></li>
+								<li><a href="#0" data-date="01/11/2014">01 Nov</a></li>
+								<li><a href="#0" data-date="10/12/2014">10 Dec</a></li>
+								<li><a href="#0" data-date="19/01/2015">29 Jan</a></li>
+								<li><a href="#0" data-date="03/03/2015">3 Mar</a></li>
+							</ol>
+
+							<span class="filling-line" aria-hidden="true"></span>
+						</div> <!-- .events -->
+					</div> <!-- .events-wrapper -->
+						
+					<ul class="cd-timeline-navigation">
+						<li><a href="#0" class="prev inactive">Prev</a></li>
+						<li><a href="#0" class="next">Next</a></li>
+					</ul> <!-- .cd-timeline-navigation -->
+				</div> <!-- .timeline -->
+			</div>
+			<div class="col-lg-6">
+				<div class="events-content">
+					<ol>
+						<li class="selected" data-date="16/01/2014">
+							<h2>Horizontal Timeline</h2>
+							<p>	
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+							</p>
+						</li>
+
+						<li data-date="28/02/2014">
+							<h2>Event title here</h2>
+							<p>	
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+							</p>
+						</li>
+
+						<li data-date="20/04/2014">
+							<h2>Event title here</h2>
+							<p>	
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+							</p>
+						</li>
+
+						<li data-date="20/05/2014">
+							<h2>Event title here</h2>
+							<p>	
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+							</p>
+						</li>
+
+						<li data-date="09/07/2014">
+							<h2>Event title here</h2>
+							<p>	
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+							</p>
+						</li>
+
+						<li data-date="30/08/2014">
+							<h2>Event title here</h2>
+							<p>	
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+							</p>
+						</li>
+
+						<li data-date="15/09/2014">
+							<h2>Event title here</h2>
+							<p>	
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+							</p>
+						</li>
+
+						<li data-date="01/11/2014">
+							<h2>Event title here</h2>
+							<p>	
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+							</p>
+						</li>
+
+						<li data-date="10/12/2014">
+							<h2>Event title here</h2>
+							<p>	
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+							</p>
+						</li>
+
+						<li data-date="19/01/2015">
+							<h2>Event title here</h2>
+							<p>	
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+							</p>
+						</li>
+
+						<li data-date="03/03/2015">
+							<h2>Event title here</h2>
+							<p>	
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+							</p>
+						</li>
+					</ol>
+				</div> <!-- .events-content -->
+				</div>
+			</div>
+		</section>
+      <!-- <section id="Steps" class="steps-section">
+         <h1 style="text-align: center;">Timeline
+         </h1>
+         <br>
+         <div class="steps-timeline">
+            <div class="steps-one">
+               <img class="steps-img" src="http://placehold.it/50/3498DB/FFFFFF" alt="" />
+               <h3 class="steps-name">
+                  January 2010
+               </h3>
+               <p class="steps-description"><br>
+                  Small fish in a big pond. Very scared but more determined.
+               </p>
+            </div>
+            <div class="steps-two">
+               <img class="steps-img" src="http://placehold.it/50/3498DB/FFFFFF" alt="" />
+               <h3 class="steps-name">
+                  June 2013
+               </h3>
+               <p class="steps-description"><br>
+                  Procured fish food. Started to grow from the extra nutrition.
+               </p>
+            </div>
+            <div class="steps-three">
+               <img class="steps-img" src="http://placehold.it/50/3498DB/FFFFFF" alt="" />
+               <h3 class="steps-name">
+                  Now
+               </h3>
+               <p class="steps-description"><br>
+                  Big fish in big pond. Currently eating small fish for fun
+               </p>
+            </div>
+         </div>
+      </section> -->
+      <div id="chart1-section" class="visible-mobile">
+         <div class="container">
+            <h1 class="lg-header" >Employee Timeline</h1>
+            <div class="chart1-padding"></div>
+            <canvas id="chart1sm"></canvas>
+         </div>
+      </div>
+      <div id="chart2-section"  class="visible-mobile">
+         <div class="container">
+            <h1 class="lg-header">GWP per year</h1>
+            <div class="chart2-padding"></div>
+            <canvas id="chart2sm"></canvas>
+         </div>
+      </div>
+      <div id="logos-section">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-5 col-md-offset-1" style="padding-top: 10px; padding-bottom: 10px;">
+                  <a  href="http://www.microsoft.com" target="_blank"><img class="img-responsive" style="max-height: 200px; width: auto; height: auto;" src="elements/general_build/msal.png"></a>
+               </div>
+               <div class="col-md-6" style="padding-top: 10px; padding-bottom: 10px;">
+                  <a  href="http://www.microsoft.com" target="_blank"><img class="img-responsive" style="max-height: 240px; width: auto; height: auto;" src="elements/general_build/msgad.png"></a>
+               </div>
+               <!-- <div class="col-md-2">
+                  </div> -->
+            </div>
+         </div>
+      </div>
+      <div id="footer-new">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-3 footer-col">
+                  <a href="index.php" title="Home page">
+                  <img src="elements/general_build/genasys_logo_white.png" alt="Genasys logo" width="100%" height="auto">
+                  </a>
+                  <p><br>is an industry leading technology-inspired software company which develops and supports world-class software and services for its partners in the insurance industry.
+               </div>
+               <div class="col-md-3 footer-col">
+                  <h4>WEBSITE NAVIGATION</h4>
+                  <hr>
+                  <ul>
+                     <li><a>ABOUT</a></li>
+                     <li><a>PRODUCTS</a></li>
+                     <li><a>PEOPLE</a></li>
+                     <li><a>CULTURE</a></li>
+                     <li><a>CONTACT</a></li>
+                  </ul>
+               </div>
+               <div class="col-md-3 footer-col">
+                  <h4>TWITTER FEED <a href="http://www.twitter.com/GenasysTech" title="Follow us on Twitter"><i class="fa fa-twitter social-icons-footer" aria-hidden="true"></i></a></h4>
+                  <a class="twitter-timeline" height="270px" data-theme="dark" data-border-color="rgba(0,0,0,0)" data-chrome="nofooter transparent noheader noborders noscrollbar"  href="https://twitter.com/GenasysTech">Tweets by GenasysTech</a> 
+               </div>
+               <div class="col-md-3 footer-col">
+                  <h4>SUPPORT LOGIN</h4>
+                  <form name="login" method="post" onsubmit="handleLogin();" action="https://genasys.force.com/customers/login?inst=U&startURL;=/customers/500/o" target="_top" novalidate="novalidate">
+                     <input type="hidden" id="pqs" name="pqs" value="?inst=U&amp;startURL=%2Fcustomers%2F500%2Fo">
+                     <fieldset style="display:none">
+                        <input type="hidden" name="un" value="">
+                        <input type="hidden" name="width" value="1920">
+                        <input type="hidden" name="height" value="1080">
+                        <input type="hidden" name="hasRememberUn" value="true">
+                        <input type="hidden" id="login_startUrl" name="startURL" value="/customers/500/o">
+                        <input type="hidden" name="loginURL" value="">
+                        <input type="hidden" name="loginType" value="">
+                        <input type="hidden" name="useSecure" value="true">
+                        <input type="hidden" name="local" value="">
+                        <input type="hidden" name="lt" value="standard">
+                        <input type="hidden" name="qs" value="">
+                        <input type="hidden" name="locale" value="">
+                        <input type="hidden" name="oauth_token" value="">
+                        <input type="hidden" name="oauth_callback" value="">
+                        <input type="hidden" name="login" value="">
+                        <input type="hidden" name="serverid" value="">
+                        <input type="hidden" name="display" value="page">
+                     </fieldset>
+                     <input class="text-field-white" type="email" placeholder="Username" value="" name="username" id="username" onkeyup="if(this.value != ''){document.getElementById('clrUsr').style.display='block';}else{document.getElementById('clrUsr').style.display='none';}">
+                     <div class="loginbox_container" onclick="document.login.password.focus();">
+                        <input class="text-field-white" type="password" placeholder="Password" id="password" name="pw" onkeypress="checkCaps(event)" autocomplete="off" onkeyup="if(this.value != ''){document.getElementById('clrPw').style.display='block';}else{document.getElementById('clrPw').style.display='none';}">
+                        <button class="button" id="Login" name="Login">SUBMIT</button>
+                     </div>
+                     <div class="loginbox_container" id="forgot">
+                        <p class="small"><a href="https://genasys.force.com/customers/secur/forgotpassword.jsp?locale=us&amp;startURL=%2Fcustomers%2F500%2Fo">Forgot your password?</a></p>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="copyright-footer">
+         <div class="container">
+            <div class="row">
+               <div class="col-xs-6 copyright-info">
+                  <p>&copy; 2017 Genasys Technologies</p>
+               </div>
+               <div class="col-xs-6"  style="text-align: right">
+                  <a href="http://www.facebook.com/Genasystech" title="Join us on Facebook"><i class="fa fa-facebook-square fa-2x social-icons-footer" aria-hidden="true"></i></a>
+                  <a href="http://www.twitter.com/GenasysTech" title="Follow us on Twitter"><i class="fa fa-twitter-square fa-2x social-icons-footer" aria-hidden="true"></i></a>
+                  <a href="http://www.youtube.com/channel/UClAVW5-xeGJK8b-QPSuWNaQ" title="Watch us on Youtube"><i class="fa fa-youtube-square fa-2x social-icons-footer" aria-hidden="true"></i></a>
+                  <a href="http://www.linkedin.com/company/genasys-technologies-pty-ltd" title="Connect with us on LinkedIn"><i class="fa fa-linkedin-square fa-2x social-icons-footer" aria-hidden="true"></i></a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script type="text/javascript">
+         function handleLogin(){
+         	document.login.un.value=document.login.username.value;
+         	document.login.width.value=screen.width;
+         	document.login.height.value=screen.height;
+         }
+      </script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="scripts/bootstrap.min.js"></script>
+      <script src="scripts/custom.js"></script>
+      <script type="text/javascript" src="scripts/iconate.min.js"></script>
+      <script src="scripts/Chart.bundle.min.js"></script>
+      <script src="https://platform.twitter.com/widgets.js"></script>
+      <script src="scripts/flickity.min.js"></script>
+	  <script src="scripts/jquery.mobile.custom.min.js"></script>
+	  <script src="scripts/main.js"></script> <!-- Resource jQuery -->
    </body>
    <!-- InstanceEnd -->
 </html>
