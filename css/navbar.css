@@ -2,14 +2,14 @@
 
 .navbar {
 	margin-bottom: 0px;
-	min-height: 60px;
+	min-height: 80px;
 	background-color: #445565;
 	border: 0px;
 	border-radius: 0px;
 }
 
 .navbar-default .navbar-header {
-	min-height: 60px;
+	min-height: 80px;
 }
 
 .navbar-default .navbar-toggle {
@@ -23,7 +23,7 @@
 }
 
 .navbar-collapse{
-	padding-top: 10px;
+	padding-top: 25px;
 	color: white;
 }
 
