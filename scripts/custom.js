@@ -362,7 +362,7 @@ $(document).ready(function(){
 		            pointHoverBorderWidth: 2,
 		            pointRadius: 4,
 		            pointHitRadius: 10,
-		            data: [32, 41, 54, 64, 74, 73, 77],
+		            data: [32, 41, 54, 64, 74, 75, 77],
 		            spanGaps: false,
 		        }
 		    ]
@@ -480,7 +480,7 @@ $(document).ready(function(){
 		            pointHoverBorderWidth: 2,
 		            pointRadius: 4,
 		            pointHitRadius: 10,
-		            data: [0, 3, 5, 8, 10, 8, 9, 12],
+		            data: [0, 3, 5, 8, 10, 10.5, 11, 12],
 		            spanGaps: false,
 		        }
 		    ]

@@ -127,10 +127,10 @@ a img, img {border:none;}
 }
 
 .stats-box-outer {
-	height: 250px;
+	height: 210px;
 	/*padding: 20px;*/
 	margin-bottom: 20px;
-	padding: 35px 0px 0px 0px;
+	padding: 15px 0px 0px 0px;
 }
 
 .stats-box-inner:hover {
@@ -154,10 +154,10 @@ a img, img {border:none;}
 
 .stats-box-inner {
 	padding-top: 5px;
-	max-width: 180px;
+	max-width: 155px;
 	margin: auto;
 	border: 1px solid white;
-	height: 165px;
+	height: 155px;
 }
 
 .box1-count{
@@ -171,19 +171,19 @@ a img, img {border:none;}
 
 .box2-sm{
 	line-height: 35px;	
-	font-size: 18px;
+	font-size: 16px;
 	color:#ccc !important;
 }
 
 .box2-md{
 	line-height: 35px;
-	font-size: 24px;
+	font-size: 20px;
 	color:white !important;	
 }
 
 .box4-count {
 	font-size: 34px;
-	padding-top: 50px;
+	padding-top: 40px;
 }
 
 .box4-sub {
@@ -198,7 +198,7 @@ a img, img {border:none;}
 }
 
 .users-icon {
-	line-height: 110px !important;
+	line-height: 90px !important;
 	color:white;
 }
 
