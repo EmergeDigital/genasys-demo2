@@ -341,7 +341,7 @@ $(document).ready(function(){
 	    labels: ["2010", "2011", "2012", "2013", "2014", "2015", "2016"],
 	    datasets: [
 		        {
-		            label: "Amount of employees",
+		            label: "Number of employees",
 		            fill: true,
 		            lineTension:0.3,
 		            backgroundColor: "rgba(54, 162, 235, 0.5)",
@@ -456,7 +456,7 @@ $(document).ready(function(){
 
 		var ctx2 = document.getElementById("chart2");
 		var data2 = {
-	    labels: ["Start", "2010", "2011", "2012", "2013", "2014", "2015", "2016"],
+	    labels: ["2010", "2011", "2012", "2013", "2014", "2015", "2016"],
 	    datasets: [
 		        {
 		            label: "GWP Billion Rand",
@@ -480,7 +480,7 @@ $(document).ready(function(){
 		            pointHoverBorderWidth: 2,
 		            pointRadius: 4,
 		            pointHitRadius: 10,
-		            data: [0, 3, 5, 8, 10, 10.5, 11, 12],
+		            data: [3, 5, 8, 10, 10.5, 11, 12],
 		            spanGaps: false,
 		        }
 		    ]
