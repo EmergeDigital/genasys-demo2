@@ -353,9 +353,10 @@ canvas{
 
  .text-field-white {
  	margin: 5px 0px 0px 0px !important;
+ 	font-size: 12px;
  	border: 1px solid white;
     border-radius: 2px;
-    padding: 5px 5px 6px 15px;
+    padding: 8px 5px 8px 15px;
     width: 100%;
     background-color: rgba(0,0,0,0);
  }
